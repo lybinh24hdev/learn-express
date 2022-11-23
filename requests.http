@@ -1,0 +1,46 @@
+GET http://localhost:7799/api/auth
+
+###
+
+POST http://localhost:7799/api/auth/register
+Content-Type: application/json
+
+{
+    "username": "dog",
+    "password": "123"
+}
+
+###
+POST http://localhost:7799/api/auth/login
+Content-Type: application/json
+
+{
+    "username": "dog",
+    "password": "123"
+}
+
+###
+POST http://localhost:7799/api/posts/create
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzdkNzY0ODI0MmUyZWYzNWYxYzBkNDAiLCJpYXQiOjE2NjkxNjY2NjR9.wFzpl9ybnHPs6ZWfyLVko3ty5c7c_otH42GpBo42KV4
+
+{
+    "title": "Catch ball"
+}
+
+###
+GET http://localhost:7799/api/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzdkNzY0ODI0MmUyZWYzNWYxYzBkNDAiLCJpYXQiOjE2NjkxNjY2NjR9.wFzpl9ybnHPs6ZWfyLVko3ty5c7c_otH42GpBo42KV4
+
+###
+PUT http://localhost:7799/api/posts/update/637d76db242e2ef35f1c0d45
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzdkNzY0ODI0MmUyZWYzNWYxYzBkNDAiLCJpYXQiOjE2NjkxNjY2NjR9.wFzpl9ybnHPs6ZWfyLVko3ty5c7c_otH42GpBo42KV4
+
+{
+    "title": "Learn Bark Updated",
+    "description": "Framework for Nodejs",
+    "url": "",
+    "status": "LEARNED"
+}
+
