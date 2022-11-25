@@ -15,8 +15,8 @@ POST http://localhost:7799/api/auth/login
 Content-Type: application/json
 
 {
-    "username": "dog",
-    "password": "123"
+    "username": "lybinh",
+    "password": "123123"
 }
 
 ###
@@ -30,7 +30,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzdkN
 
 ###
 GET http://localhost:7799/api/posts
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzdkNzY0ODI0MmUyZWYzNWYxYzBkNDAiLCJpYXQiOjE2NjkxNjY2NjR9.wFzpl9ybnHPs6ZWfyLVko3ty5c7c_otH42GpBo42KV4
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2Mzc2ZWVmYTMxZTA5MTQwOTY2NDIwNzgiLCJpYXQiOjE2NjkxNzA3Mzh9.F9aK2CAyQ0jygFZtZS_4V_tzlLm4TrQrN5jD6rk0OJI
 
 ###
 PUT http://localhost:7799/api/posts/update/637d76db242e2ef35f1c0d45
@@ -44,3 +44,6 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzdkN
     "status": "LEARNED"
 }
 
+###
+DELETE http://localhost:7799/api/posts/63773a0f112b2702ff3aeac9
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2Mzc2ZWVmYTMxZTA5MTQwOTY2NDIwNzgiLCJpYXQiOjE2NjkxNzA4OTd9.fqI02skQKJscu4S5ifO5IMGU-x8Pr1fH2591xFRHP2U
