@@ -43,7 +43,7 @@ router.post('/create', verifyToken, async (req, res) => {
         const newPost = new Post({
             title,
             description,
-            url: !url || (url.startsWith('https://') ? url : `https://${url}`),
+            url: url ? ((url.startsWith('https://') ? url : `https://${url}`)) : null,
             status: status || 'TO LEARN',
             user: req.userId
         })
@@ -80,7 +80,7 @@ router.put('/update/:postId', verifyToken, async (req, res) => {
         let updatedPost = {
             title,
             description,
-            url: url.startsWith('https://') ? url : `https://${url}`,
+            url: url ? ((url.startsWith('https://') ? url : `https://${url}`)) : null,
             status: status || 'TO LEARN'
         }
 

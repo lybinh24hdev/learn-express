@@ -1,17 +1,19 @@
 import React from 'react'
-import { Outlet } from 'react-router-dom'
+import { Navigate, Outlet } from 'react-router-dom'
 import Footer from './Footer'
 import Header from './Header'
+import styles from './styles.module.scss'
 
 const Layout = () => {
 	return (
-		<div>
-			<Header />
-			<div>
-				<Outlet />
-			</div>
-			<Footer />
-		</div>
+		<Navigate to="/login" />
+		// <div className={styles.wrapper}>
+		// 	<Header />
+		// 	<div className={styles.content}>
+		// 		<Outlet />
+		// 	</div>
+		// 	<Footer />
+		// </div>
 	)
 }
 

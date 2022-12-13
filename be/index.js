@@ -1,6 +1,7 @@
 require('dotenv').config()
 const express = require('express')
 const morgan = require('morgan')
+const cors = require('cors')
 
 const route = require('./src/routes')
 const connectDB = require('./src/configs/database')
@@ -13,6 +14,7 @@ const PORT = process.env.PORT || 3000
 const app = express()
 
 app.use(express.json())
+app.use(cors())
 
 app.use(morgan('short'))
 
@@ -20,5 +22,5 @@ app.use(morgan('short'))
 route(app)
 
 app.listen(PORT, () => {
-    console.log(`Server listening on ${PORT}`)
+	console.log(`Server listening on ${PORT}`)
 })
